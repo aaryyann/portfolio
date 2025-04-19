@@ -91,7 +91,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       animate={{
         backdropFilter: visible ? "blur(10px)" : "none",
         boxShadow: visible
-          ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
+          ? "0 0 48px rgba(21, 106, 225, 0.06), 0 2px 2px rgba(255, 9, 9, 0.05), 0 0 0 2px rgba(0, 103, 248, 0.04), 0 0 4px rgba(0, 106, 255, 0.08), 0 16px 68px rgba(0, 30, 255, 0.05), 0 1px 0 rgba(255, 0, 0, 0.1) inset"
           : "none",
         width: visible ? "40%" : "100%",
         y: visible ? 20 : 0,
@@ -106,7 +106,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        visible && "bg-black dark:bg-neutral-950/80",
         className,
       )}
     >
@@ -197,7 +197,6 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
@@ -218,19 +217,18 @@ export const MobileNavMenu = ({
   );
 };
 
-export const MobileNavToggle = ({
-  isOpen,
-  onClick,
+export function MobileNavToggle({
+  isOpen, onClick,
 }: {
   isOpen: boolean;
   onClick: () => void;
-}) => {
+}): React.JSX.Element {
   return isOpen ? (
     <IconX className="text-black dark:text-white" onClick={onClick} />
   ) : (
     <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
   );
-};
+}
 
 export const NavbarLogo = () => {
   return (
@@ -241,16 +239,16 @@ export const NavbarLogo = () => {
       <Img
         src={LogoImg}
         alt="logo"
-        width={50}
-        height={50}
+        width={70}
+        height={70}
       />
-      <span className="font-medium text-black dark:text-white">Aryan Gupta</span>
+      <span className="font-medium text-white dark:text-white">Aryan Gupta</span>
     </a>
   );
 };
 
 export const NavbarButton = ({
-  href,
+
   as: Tag = "a",
   children,
   className,
@@ -280,7 +278,7 @@ export const NavbarButton = ({
 
   return (
     <Tag
-      href={href || undefined}
+      href={"https://drive.google.com/file/d/1a_1p4b1isu_5HaCZv1G3o6faH0jz4hwk/view?usp=sharing"}
       className={cn(baseStyles, variantStyles[variant], className)}
       {...props}
     >

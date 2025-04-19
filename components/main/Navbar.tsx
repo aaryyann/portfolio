@@ -11,6 +11,7 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import HeroSec from "./HeroSec";
 
 export default function NavbarDemo() {
   const navItems = [
@@ -90,7 +91,9 @@ export default function NavbarDemo() {
         </MobileNav>
       </Navbar>
 
+
       {/* Navbar */}
+      <HeroSec/>
     </div>
   );
 }
