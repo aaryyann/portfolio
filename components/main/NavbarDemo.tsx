@@ -11,10 +11,10 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import HeroSec from "./HeroSec";
 import Link from "next/link";
-import { ThreeDCardDemo } from "./Projects";
 
-export default function NavbarHead() {
+export default function NavbarDemo() {
   const navItems = [
     {
       name: "Home",
@@ -94,7 +94,7 @@ export default function NavbarHead() {
 
 
       {/* Navbar */}
-      <ThreeDCardDemo></ThreeDCardDemo>
+      <HeroSec/>
     </div>
   );
 }

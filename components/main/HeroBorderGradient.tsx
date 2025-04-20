@@ -16,13 +16,12 @@ export function HoverBorderGradientDemo() {
       </HoverBorderGradient>
       <div className="text-center md:text-left">
         <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-yellow-400 text-4xl md:text-7xl font-bold'>SLEEK DESIGN</h1>
-        <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-yellow-200 text-4xl md:text-6xl font-bold'>X</h1>
-        <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-900 text-4xl md:text-7xl font-bold'>CLEAN CODE</h1>
+        <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-200 text-4xl md:text-6xl font-bold'>X</h1>
+        <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600 text-4xl md:text-7xl font-bold'>CLEAN CODE</h1>
       </div>
       <div className="w-[100%] sm:w-[45%] text-2xl text-center md:text-left text-gray-400">
-        Greeting, This is Aryan Gupta - 
+        Greetings! This is Aryan Gupta - 
         A full stack developer crafting sleek UIs, powerful backends, and seamless user experiences.
-        Code. Create. Ship. Repeat. 🚀.
       </div>
     </div>
   );

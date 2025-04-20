@@ -1,6 +1,8 @@
 
 import Hero from '@/components/main/Hero'
-import NavbarDemo from '@/components/main/Navbar'
+import NavbarDemo from '@/components/main/NavbarDemo'
+import { ThreeDCardDemo } from '@/components/main/Projects'
+import TechStack from '@/components/main/TechStack'
 import React from 'react'
 
 const page = () => {
@@ -13,6 +15,12 @@ const page = () => {
         <div className='bg-grey-800'>
           <NavbarDemo />
         </div>
+      </div>
+      <div>
+        <TechStack/>
+      </div>
+      <div>
+        <ThreeDCardDemo/>
       </div>
     </>
 
