@@ -44,7 +44,7 @@ export default function NavbarHead() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton variant="primary">Download CV</NavbarButton>
+            <NavbarButton variant="primary" href="/Aryan_mai.pdf">Download CV</NavbarButton>
           </div>
         </NavBody>
 
@@ -84,6 +84,7 @@ export default function NavbarHead() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full"
+                href="/Aryan_mai.pdf"
               >
                 Download CV
               </NavbarButton>

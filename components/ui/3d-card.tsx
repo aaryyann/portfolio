@@ -96,7 +96,6 @@ export const CardBody = ({
 };
 
 export const CardItem = ({
-  as: Tag = "div",
   children,
   className,
   translateX = 0,
@@ -116,7 +115,7 @@ export const CardItem = ({
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
-  [key: string]: any;
+  [key: string]: unknown;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
@@ -135,13 +134,13 @@ export const CardItem = ({
   };
 
   return (
-    <Tag
+    <div
       ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
       {...rest}
     >
       {children}
-    </Tag>
+    </div>
   );
 };
 

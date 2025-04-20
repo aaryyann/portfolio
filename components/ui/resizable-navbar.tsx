@@ -249,22 +249,18 @@ export const NavbarLogo = () => {
 };
 
 export const NavbarButton = ({
-
-  as: Tag = "a",
+  href,
   children,
   className,
   variant = "primary",
   ...props
 }: {
   href?: string;
-  as?: React.ElementType;
   children: React.ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "dark" | "gradient";
-} & (
-  | React.ComponentPropsWithoutRef<"a">
-  | React.ComponentPropsWithoutRef<"button">
-)) => {
+} & (React.AnchorHTMLAttributes<HTMLAnchorElement> | React.ButtonHTMLAttributes<HTMLButtonElement>)) => {
+  
   const baseStyles =
     "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
 
@@ -277,13 +273,29 @@ export const NavbarButton = ({
       "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   };
 
+  const allClasses = cn(baseStyles, variantStyles[variant], className);
+
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={allClasses}
+        {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <Tag
-      href={"https://drive.google.com/file/d/1a_1p4b1isu_5HaCZv1G3o6faH0jz4hwk/view?usp=sharing"}
-      className={cn(baseStyles, variantStyles[variant], className)}
-      {...props}
+    <button
+      className={allClasses}
+      {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}
     >
       {children}
-    </Tag>
+    </button>
   );
 };
+
+

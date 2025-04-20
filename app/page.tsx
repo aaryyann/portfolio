@@ -1,4 +1,4 @@
-
+'use client'
 import Hero from '@/components/main/Hero'
 import NavbarDemo from '@/components/main/NavbarDemo'
 import { ThreeDCardDemo } from '@/components/main/Projects'
