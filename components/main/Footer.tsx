@@ -11,7 +11,7 @@ export default function FooterWithGlobe() {
         <div className="flex flex-col gap-6">
           {/* Socials */}
           <div className="flex flex-col items-center md:items-start gap-4">
-            <h3 className="text-xl md:text-4xl font-semibold">Connect with us</h3>
+            <h3 className="text-xl md:text-4xl font-semibold">Let's Build Together</h3>
             <div className="flex gap-6 text-2xl">
               <a
                 href="https://www.linkedin.com/in/yourprofile"
