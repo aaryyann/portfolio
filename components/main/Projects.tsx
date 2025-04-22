@@ -32,13 +32,14 @@ const SlideUp = ({
         visible: { opacity: 1, y: 0 },
       }}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      exit={{ opacity: 0 }}
     >
       {children}
     </motion.div>
   );
 };
 
-export function ThreeDCardDemo() {
+export function ProjectsCard() {
   return (
     <div className="bg-black py-12 px-6">
       <div className="text-6xl text-white font-bold max-w-5xl mx-auto md:mx-40 md:max-w-full text-center">
@@ -73,8 +74,8 @@ export function ThreeDCardDemo() {
           <AnimatedPinDemo
             href={"https://github.com/aaryyann/report-crime"}
             title={"Report Crime"}
-            desc={"Developed a full-stack application that allows users to report crimes securely, with role-based access and real-time tracking of submitted cases through a user-friendly dashboard."}
-            src="/wastewatchers.png"
+            desc={"Developed a full-stack application that allows users to report crimes, with role-based access and real-time tracking of cases through a dashboard."}
+            src="/report.png"
           />
         </SlideUp>
       </div>

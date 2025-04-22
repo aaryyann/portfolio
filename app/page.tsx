@@ -1,7 +1,7 @@
 'use client'
-import Hero from '@/components/main/Hero'
-import NavbarDemo from '@/components/main/NavbarDemo'
-import { ThreeDCardDemo } from '@/components/main/Projects'
+import Hero from '@/components/main/HeroBackground'
+import NavbarHome from '@/components/main/NavbarHome'
+import { ProjectsCard } from '@/components/main/Projects'
 import TechStack from '@/components/main/TechStack'
 import React from 'react'
 
@@ -13,14 +13,14 @@ const page = () => {
       </div>
       <div className='absolute top-0 w-full'>
         <div className='bg-grey-800'>
-          <NavbarDemo />
+          <NavbarHome />
         </div>
       </div>
       <div>
         <TechStack/>
       </div>
       <div>
-        <ThreeDCardDemo/>
+        <ProjectsCard/>
       </div>
     </>
 

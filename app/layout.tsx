@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import FooterWithGlobe from "@/components/main/Footer";
+import Footer from "@/components/main/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +29,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-y-scroll overflow-x-hidden`}
       >
         {children}
-        <FooterWithGlobe></FooterWithGlobe>
+        <Footer></Footer>
       </body>
     </html>
   );

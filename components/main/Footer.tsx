@@ -1,77 +1,74 @@
-"use client";
-import React from "react";
-import { GlobeDemo } from "./GlobeDemo"; // Adjust the path if needed
-import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
+'use client'
+import React, { useEffect, useState } from 'react';
+import ContactForm from './ContactForm';
+import SocialLinks from './SocialLinks';
 
-export default function FooterWithGlobe() {
+const Footer: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    
+    setIsVisible(true);
+  }, []);
+
   return (
-    <footer className="w-full bg-black text-white px-6 py-10">
-      <div className=" mx-auto md:mx-40 grid md:grid-cols-2">
-        {/* Left: Socials + Contact Form */}
-        <div className="flex flex-col gap-6">
-          {/* Socials */}
-          <div className="flex flex-col items-center md:items-start gap-4">
-            <h3 className="text-xl md:text-4xl font-semibold">Let's Build Together</h3>
-            <div className="flex gap-6 text-2xl">
-              <a
-                href="https://www.linkedin.com/in/yourprofile"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#0077b5] transition-colors duration-300"
-              >
-                <FaLinkedin />
-              </a>
-              <a
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#6e5494] transition-colors duration-300"
-              >
-                <FaGithub />
-              </a>
-              <a
-                href="https://www.instagram.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-pink-500 transition-colors duration-300"
-              >
-                <FaInstagram />
-              </a>
+    <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white pt-12 pb-8 overflow-hidden">
+      {/*  background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+            {/* Left side: Info and links */}
+            <div className="space-y-12">
+              <div className={`transition-all duration-700 delay-100 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                <h2 className="text-3xl font-bold mb-6 text-white">{"Let's Connect"}</h2>
+                <p className="text-gray-300 max-w-md mb-8">
+                  {"I'm always interested in new projects and opportunities. Feel free to reach out, and I'll get back to you as soon as possible."}
+                </p>
+                
+                {/* Contact info */}
+                <div className="space-y-3 text-gray-300">
+                  <p className="flex items-center">
+                    <span className="w-8">📍</span>
+                    <span>ABES Engineering College , Ghaziabad</span>
+                  </p>
+                  <p className="flex items-center">
+                    <span className="w-8">📧</span>
+                    <span>arya000045@gmail.com</span>
+                  </p>
+                </div>
+              </div>
+              
+
+              {/* Social links */}
+              <div className={`transition-all duration-700 delay-300 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                <SocialLinks />
+              </div>
+            </div>
+            
+            {/* Right side: Contact form */}
+            <div className={`transition-all duration-1000 delay-400 transform ${isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-8 opacity-0 scale-95'}`}>
+              <ContactForm />
             </div>
           </div>
-
-          {/* Contact Form */}
-          <form className="flex flex-col gap-4 w-full max-w-md">
-            <h4 className="text-lg font-medium">Send a Message</h4>
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="px-4 py-2 rounded-md bg-[#1a1a1a] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="px-4 py-2 rounded-md bg-[#1a1a1a] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <textarea
-              placeholder="Your Message"
-              rows={4}
-              className="px-4 py-2 rounded-md bg-[#1a1a1a] text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <button
-              type="submit"
-              className="bg-blue-600 hover:bg-blue-700 transition-colors duration-300 py-2 px-4 rounded-md text-white font-semibold"
-            >
-              Send
-            </button>
-          </form>
         </div>
 
-        {/* Right: Globe */}
-        <div className="w-full flex justify-center md:justify-end">
-          <GlobeDemo />
+        {/* Bottom section */}
+        <div className="pt-8 border-t border-gray-700">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            
+            <div className={`text-gray-500 text-sm mt-6 md:mt-0 transition-all duration-700 delay-600 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
+              © {new Date().getFullYear()} Portfolio. All rights reserved.
+            </div>
+          </div>
         </div>
       </div>
+
     </footer>
   );
-}
+};
+
+export default Footer;

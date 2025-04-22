@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
 import Link from "next/link";
-import { ThreeDCardDemo } from "./Projects";
+import { ProjectsCard } from "./Projects";
 
 export default function NavbarHead() {
   const navItems = [
@@ -95,7 +95,7 @@ export default function NavbarHead() {
 
 
       {/* Navbar */}
-      <ThreeDCardDemo></ThreeDCardDemo>
+      <ProjectsCard/>
     </div>
   );
 }

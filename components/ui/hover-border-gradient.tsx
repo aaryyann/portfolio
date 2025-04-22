@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";  // Corrected import for framer-motion
+import { motion } from "motion/react";  // Corrected import for framer-motion
 import { cn } from "@/lib/utils"; // Assuming cn is a utility to join classNames
 
 type Direction = "TOP" | "LEFT" | "BOTTOM" | "RIGHT";
@@ -73,6 +73,7 @@ export function HoverBorderGradient({
           background: hovered ? [movingMap[direction], highlight] : movingMap[direction],
         }}
         transition={{ ease: "linear", duration: duration ?? 1 }}
+        exit={{ opacity: 0 }}
       />
 
       <div className="bg-black absolute z-1 flex-none inset-[2px] rounded-[100px]" />

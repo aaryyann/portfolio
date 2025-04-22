@@ -59,7 +59,8 @@ export default function TechStack() {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.07 }}
-              className="bg-zinc-900 rounded-xl p-5 flex flex-col items-center justify-center shadow-lg hover:scale-105 hover:shadow-cyan-500/20 transition-all"
+              exit={{ opacity: 0 }}
+              className="bg-zinc-900 rounded-xl p-5 flex flex-col items-center justify-center shadow-lg hover:scale-105 hover:shadow-cyan-500/20 transition-all bg-gradient-to-t hover:from-gray hover:via-gray-800 hover:to-gray"
             >
               <div className="text-4xl mb-2">{tech.icon}</div>
               <p className="font-semibold">{tech.name}</p>

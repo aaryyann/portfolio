@@ -3,13 +3,13 @@ import React from "react";
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 
-export function HoverBorderGradientDemo() {
+export function HeroSectionContent() {
   return (
     <div className="mx-2 my-10 md:mx-40 md:my-15 flex flex-col space-y-8 items-center md:items-start">
       <HoverBorderGradient
         containerClassName="rounded-full"
         as="button"
-        className="bg-black text-white flex items-center space-x-2"
+        className="bg-black text-white flex items-center space-x-2 hover:shadow-white/[0.65] hover:shadow-2xl"
       >
         <AceternityLogo />
         <span className="font-medium">FullStack Developer & Web Designer</span>

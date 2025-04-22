@@ -6,7 +6,7 @@ import {
   AnimatePresence,
   useScroll,
   useMotionValueEvent,
-} from "motion/react";
+} from "framer-motion";
 
 import React, { useRef, useState } from "react";
 import Img from "next/image"
@@ -52,7 +52,7 @@ interface MobileNavMenuProps {
   onClose: () => void;
 }
 
-export const Navbar = ({ children, className }: NavbarProps) => {
+export  const Navbar = ({ children, className }: NavbarProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll({
     target: ref,
@@ -72,6 +72,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
+      exit={{ opacity: 0 }}
       className={cn("sticky inset-x-0 top-5 z-40 w-full", className)}
     >
       {React.Children.map(children, (child) =>
@@ -102,6 +103,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         stiffness: 200,
         damping: 50,
       }}
+      exit={{ opacity: 0 }}
       style={{
         minWidth: "800px",
       }}
@@ -126,6 +128,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
         className,
       )}
+      exit={{ opacity: 0 }}
     >
       {items.map((item, idx) => (
         <Link
@@ -167,6 +170,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         stiffness: 200,
         damping: 50,
       }}
+      exit={{ opacity: 0 }}
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
         visible && "bg-white/80 dark:bg-neutral-950/80",

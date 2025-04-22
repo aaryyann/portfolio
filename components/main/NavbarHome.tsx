@@ -11,10 +11,10 @@ import {
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
-import HeroSec from "./HeroSec";
+import HeroSec from "./HeroSection";
 import Link from "next/link";
 
-export default function NavbarDemo() {
+export default function NavbarHome() {
   const navItems = [
     {
       name: "Home",

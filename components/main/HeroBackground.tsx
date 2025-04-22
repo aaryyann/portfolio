@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Hero = () => {
+const HeroBackground = () => {
   return (
     <div>
         <video
@@ -15,4 +15,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default HeroBackground
