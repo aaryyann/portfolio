@@ -20,7 +20,7 @@ export function HeroSectionContent() {
         <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600 text-4xl md:text-7xl font-bold'>CLEAN CODE</h1>
       </div>
       <div className="w-[100%] sm:w-[45%] text-2xl text-center md:text-left text-gray-400">
-        Greetings! This is Aryan Gupta - 
+        Greetings! This is Aryan - 
         A full stack developer crafting sleek UIs, powerful backends, and seamless user experiences.
       </div>
     </div>

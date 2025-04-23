@@ -41,20 +41,23 @@ const SlideUp = ({
 
 export function ProjectsCard() {
   return (
-    <div className="bg-black py-12 px-6">
-      <div className="text-6xl text-white font-bold max-w-5xl mx-auto md:mx-40 md:max-w-full text-center">
+    <div className="bg-black py-12 px-4 sm:px-6 lg:px-20">
+      <div className="text-4xl sm:text-5xl lg:text-6xl text-white font-bold max-w-5xl mx-auto text-center">
         Featured Projects
       </div>
-      <p className="mx-auto mt-10 md:mx-40 md:max-w-full text-center text-md text-white">Building Scalable and Impactful Projects with Cutting-Edge Technologies</p>
+      <p className="mx-auto mt-6 text-center text-sm sm:text-md md:text-lg text-white max-w-2xl">
+        Building Scalable and Impactful Projects with Cutting-Edge Technologies
+      </p>
 
-      <div className="mt-2 md:mx-40 flex">
-
+      <div className="mt-10 flex flex-col md:flex-row flex-wrap justify-center items-stretch gap-8">
         {/* Mind Stack */}
         <SlideUp delay={0}>
           <AnimatedPinDemo
             href={"https://github.com/aaryyann/mindstack"}
             title={"Mind Stack"}
-            desc={"Developed a full-stack web application that allows users to securely sign up, log in, and manage embedded social media posts via a personalized dashboard."}
+            desc={
+              "Developed a full-stack web application that allows users to securely sign up, log in, and manage embedded social media posts via a personalized dashboard."
+            }
             src="/mindstack.png"
           />
         </SlideUp>
@@ -64,7 +67,9 @@ export function ProjectsCard() {
           <AnimatedPinDemo
             href={"https://github.com/aaryyann/Wastewatchers"}
             title={"Waste Watcher"}
-            desc={"Built a decentralized waste management app enabling users to report, track, and manage waste disposal using a secure system with Web3 authentication."}
+            desc={
+              "Built a decentralized waste management app enabling users to report, track, and manage waste disposal using a secure system with Web3 authentication."
+            }
             src="/wastewatchers.png"
           />
         </SlideUp>
@@ -74,7 +79,9 @@ export function ProjectsCard() {
           <AnimatedPinDemo
             href={"https://github.com/aaryyann/report-crime"}
             title={"Report Crime"}
-            desc={"Developed a full-stack application that allows users to report crimes, with role-based access and real-time tracking of cases through a dashboard."}
+            desc={
+              "Developed a full-stack application that allows users to report crimes, with role-based access and real-time tracking of cases through a dashboard."
+            }
             src="/report.png"
           />
         </SlideUp>
@@ -82,3 +89,4 @@ export function ProjectsCard() {
     </div>
   );
 }
+

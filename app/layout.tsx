@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Aryan Gupta",
   description: "Explore Aryan's portfolio featuring full stack projects, innovative web apps, and creative solutions using Next.js, React, TypeScript, and more.",
+  icons: {
+    icon : { url: "/favicon.png", sizes: "32x32", type: "image/png" }
+  },
 };
 
 export default function RootLayout({
