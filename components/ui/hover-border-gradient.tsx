@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import { motion } from "motion/react";  // Corrected import for framer-motion
-import { cn } from "@/lib/utils"; // Assuming cn is a utility to join classNames
+import { motion } from "motion/react";  
+import { cn } from "@/lib/utils"; 
 
 type Direction = "TOP" | "LEFT" | "BOTTOM" | "RIGHT";
 

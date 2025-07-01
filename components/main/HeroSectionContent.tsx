@@ -1,34 +1,40 @@
 "use client";
 import React from "react";
+import Img from "next/image"
 import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 
 export function HeroSectionContent() {
   return (
-    <div className="mx-2 my-10 md:mx-40 md:my-15 flex flex-col space-y-8 items-center md:items-start">
-      <HoverBorderGradient
-        containerClassName="rounded-full"
-        as="button"
-        className="bg-black text-white flex items-center space-x-2 hover:shadow-white/[0.65] hover:shadow-2xl"
-      >
-        <AceternityLogo />
-        <span className="font-medium">FullStack Developer & Web Designer</span>
-      </HoverBorderGradient>
-      <div className="text-center md:text-left">
-        <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-yellow-400 text-4xl md:text-7xl font-bold'>SLEEK DESIGN</h1>
-        <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-200 text-4xl md:text-6xl font-bold'>X</h1>
-        <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600 text-4xl md:text-7xl font-bold'>CLEAN CODE</h1>
+    <div className="mx-2 my-10 md:mx-40 md:my-15 flex md:flex-row space-y-8 items-center md:items-start">
+      <div>
+        <HoverBorderGradient
+          containerClassName="rounded-full"
+          as="button"
+          className="bg-black text-white flex items-center space-x-2 hover:shadow-white/[0.65] hover:shadow-2xl"
+        >
+          <AceternityLogo />
+          <span className="font-medium">FullStack Developer & Web Designer</span>
+        </HoverBorderGradient>
+        <div className="text-center md:text-left">
+          <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-yellow-400 text-4xl md:text-7xl font-bold'>SLEEK DESIGN</h1>
+          <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-200 text-4xl md:text-6xl font-bold'>X</h1>
+          <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-600 text-4xl md:text-7xl font-bold'>CLEAN CODE</h1>
+        </div>
+        <div className="w-[100%] sm:w-[45%] text-2xl text-center md:text-left text-gray-400">
+          Greetings! This is Aryan -
+          A full stack developer crafting sleek UIs, powerful backends, and seamless user experiences.
+        </div>
       </div>
-      <div className="w-[100%] sm:w-[45%] text-2xl text-center md:text-left text-gray-400">
-        Greetings! This is Aryan - 
-        A full stack developer crafting sleek UIs, powerful backends, and seamless user experiences.
+      <div className="">
+        <Img src={"/sideImage.png"} width="1000" height="900" alt="Side illustration" />
       </div>
-    </div>
+    </div>    
   );
 }
 
 const AceternityLogo = () => {
-  return (
+  return (  
     <svg
       width="66"
       height="65"
